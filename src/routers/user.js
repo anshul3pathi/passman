@@ -73,7 +73,7 @@ router.patch("/users/me", auth, async (req, res) => {
     })
 
     if (!isUpdateValid) {
-        res.status(404).send({ error: "One or more fields are invalid!"})
+        return res.status(404).send({ error: "One or more fields are invalid!"})
     }
 
     try {
